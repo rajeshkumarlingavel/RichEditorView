@@ -1,3 +1,5 @@
+This is Modifed version of https://github.com/cjwirth/RichEditorView
+
 RichEditorView
 --------------
 [![License: BSD 3](https://img.shields.io/badge/license-BSD3-blue.svg)](./LICENSE.md)
