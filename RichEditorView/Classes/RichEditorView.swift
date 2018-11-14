@@ -409,7 +409,7 @@ import UIKit
                     jsonCommands = try JSONSerialization.jsonObject(with: data) as? [String] ?? []
                 } catch {
                     jsonCommands = []
-                    NSLog("RichEditorView: Failed to parse JSON Commands")
+//                    NSLog("RichEditorView: Failed to parse JSON Commands")
                 }
 
                 jsonCommands.forEach(performCommand)
