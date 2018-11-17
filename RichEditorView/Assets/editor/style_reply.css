@@ -18,6 +18,10 @@
 :root {
     --text-color: #FFFFFF;
     --bg-color: #1A1A1A;
+    --link-color: #01AA70;
+}
+a {
+    color: var(--link-color) !important;
 }
 
 html {
@@ -25,6 +29,7 @@ html {
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
+
 
 body {
     min-height: 100%;

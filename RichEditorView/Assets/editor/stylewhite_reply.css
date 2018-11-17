@@ -18,6 +18,11 @@
 :root {
     --text-color: #000000;
     --bg-color: #FFFFFF;
+    --link-color: #01AA70;
+}
+
+a {
+    color: var(--link-color) !important;
 }
 
 html {

@@ -154,7 +154,7 @@ import UIKit
         webView.frame = bounds
         webView.delegate = self
         webView.keyboardDisplayRequiresUserAction = false
-        webView.scalesPageToFit = false
+        webView.scalesPageToFit = true
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.dataDetectorTypes = UIDataDetectorTypes()
         webView.backgroundColor = .white
@@ -530,6 +530,9 @@ import UIKit
                 isContentEditable = editingEnabledVar
                 placeholder = placeholderText
                 lineHeight = innerLineHeight
+                let zoom = webView.bounds.size.width / webView.scrollView.contentSize.width
+                webView.scrollView.setZoomScale(zoom, animated: true)
+
                 delegate?.richEditorDidLoad?(self)
             }
             updateHeight()
