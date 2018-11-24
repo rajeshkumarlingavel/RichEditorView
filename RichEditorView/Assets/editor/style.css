@@ -49,6 +49,7 @@ body, h1, p,td,tr {
 div {
     display: block;
     position: static;
+    white-space: normal !important;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
@@ -79,7 +80,7 @@ div {
     overflow: auto;
     display: block;
     font-family: 'HelveticaNeue';
-    font-size: 13pt;
+    font-size: 12pt;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
