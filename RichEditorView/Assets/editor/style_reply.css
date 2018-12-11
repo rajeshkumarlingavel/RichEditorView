@@ -33,21 +33,25 @@ html {
 
 body {
     min-height: 100%;
+    max-width: 100% !important;
     overflow: auto;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
 td, th,tr,table,span{
+    max-width: 100% !important;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
 body, h1, p,td,tr {
     margin: 0;
+    max-width: 100% !important;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
 
 div {
+    max-width: 100% !important;
     display: block;
     position: static;
     color : var(--text-color) !important;
@@ -55,15 +59,18 @@ div {
 }
 
 #editor {
+    max-width: 100% !important;
     -webkit-user-select: auto !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #mailcontentid{
+    max-width: 100% !important;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
 }
 #editor:focus {
+    max-width: 100% !important;
     outline: 0px solid transparent;
 }
 
@@ -76,6 +83,7 @@ div {
 
 #editor {
     min-height: 100%;
+    max-width: 100% !important;
     height: 100%;
     overflow: auto;
     display: block;
@@ -83,4 +91,8 @@ div {
     font-size: 13pt;
     color : var(--text-color) !important;
     background-color : var(--bg-color) !important;
+}
+img{
+    max-width: 100% !important;
+    object-fit:cover !important;
 }

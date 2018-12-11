@@ -10,6 +10,10 @@ import UIKit
 /// RichEditorDelegate defines callbacks for the delegate of the RichEditorView
 @objc public protocol RichEditorDelegate: class {
 
+    
+    @objc optional func richEditor(_ editor: RichEditorView, viewTapped:Bool)
+
+
     /// Called when the inner height of the text being displayed changes
     /// Can be used to update the UI
     @objc optional func richEditor(_ editor: RichEditorView, heightDidChange height: Int)
@@ -158,7 +162,8 @@ import UIKit
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.dataDetectorTypes = UIDataDetectorTypes()
         webView.backgroundColor = .white
-        
+        webView.contentMode = UIViewContentMode.scaleAspectFit
+
         webView.scrollView.isScrollEnabled = isScrollEnabled
         webView.scrollView.bounces = false
         webView.scrollView.delegate = self
@@ -570,6 +575,7 @@ import UIKit
     /// Called by the UITapGestureRecognizer when the user taps the view.
     /// If we are not already the first responder, focus the editor.
     @objc private func viewWasTapped() {
+        delegate?.richEditor?(self, viewTapped: true)
         if !webView.containsFirstResponder {
             let point = tapRecognizer.location(in: webView)
             focus(at: point)
