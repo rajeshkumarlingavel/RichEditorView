@@ -102,6 +102,7 @@ RE.setHtml = function(contents) {
     }
     RE.editor.innerHTML = tempWrapper.innerHTML;
     RE.updatePlaceholder();
+    RE.callback("ready");
 };
 
 RE.getHtml = function() {

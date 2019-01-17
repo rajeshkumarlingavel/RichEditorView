@@ -1,100 +1,30 @@
 
 @charset "UTF-8";
-:root {
-    /*    --text-color: #000000;*/
-    /*    --bg-color: #FFFFFF;*/
-    --link-color: #01AA70;
-}
-
 a {
-/*    color: var(--link-color) !important;*/
+    color: #01AA70; !important;
 }
 
 html {
     height: 100%;
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
+    line-height: normal !important;
+    max-width: 100% !important;
+}
+body{
+    min-height: 100%;
+    overflow: auto;
+    max-width: 100% !important;
     line-height: normal !important;
     max-width: 100% !important;
 }
 
-body {
-    min-height: 100%;
-    overflow: auto;
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
-    max-width: 100% !important;
-    line-height: normal !important;
-}
-td, th,tr,table,span{
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
-    max-width: 100% !important;
-    line-height: normal !important;
-    max-width: 100% !important;
-}
-body, h1, p,td,tr {
-    margin: 0;
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
-    margin-top: 0px !important;
-    margin-right: 0px !important;
-    margin-bottom: 5px !important;
-    margin-left: 0px !important;
-    line-height: normal !important;
-    max-width: 100% !important;
-}
-img{
+td, th,tr,table,span,p,div{
     max-width: 100% !important;
     object-fit:cover !important;
 }
 
-div {
-    display: block;
-    position: static;
-    line-height: normal !important;
-    white-space: normal !important;
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
+img{
     max-width: 100% !important;
+    object-fit: contain !important;
 }
 
-#editor {
-    max-width: 100% !important;
-    -webkit-user-select: auto !important;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-#mailcontentid{
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
-    max-width: 100% !important;
-}
-#editor:focus {
-    outline: 0px solid transparent;
-    max-width: 100% !important;
-    max-width: 100% !important;
-}
-
-.placeholder[placeholder]:after {
-    content: attr(placeholder);
-    position: absolute;
-    top: 0px;
-    color: #cccccc;
-    max-width: 100% !important;
-}
-
-#editor {
-    min-height: 100%;
-    max-width: 100% !important;
-    height: 100%;
-    overflow: auto;
-    display: block;
-    line-height: normal !important;
-    font-family: 'San Francisco';
-    font-size: 12pt;
-    max-width: 100% !important;
-/*    color : var(--text-color) !important;*/
-/*    background-color : var(--bg-color) !important;*/
-}
 

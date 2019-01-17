@@ -184,14 +184,14 @@ import UIKit
         addGestureRecognizer(tapRecognizer)
     }
 
-    public func loadHTML(with textColor:UIColor,bgColor:UIColor){
-        if let filePath = Bundle(for: RichEditorView.self).path(forResource: "rich_editor", ofType: "html") {
-            let url = URL(fileURLWithPath: filePath, isDirectory: false)
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
-        }
-//        webView.loadHTMLString("".getHTML(textColor: textColor, bgColor: bgColor), baseURL: nil)
-    }
+//    public func loadHTML(with textColor:UIColor,bgColor:UIColor){
+//        if let filePath = Bundle(for: RichEditorView.self).path(forResource: "rich_editor", ofType: "html") {
+//            let url = URL(fileURLWithPath: filePath, isDirectory: false)
+//            let request = URLRequest(url: url)
+//            webView.loadRequest(request)
+//        }
+////        webView.loadHTMLString("".getHTML(textColor: textColor, bgColor: bgColor), baseURL: nil)
+//    }
     // MARK: - Rich Text Editing
 
     // MARK: Properties
@@ -537,10 +537,12 @@ import UIKit
                 lineHeight = innerLineHeight
                 let zoom = webView.bounds.size.width / webView.scrollView.contentSize.width
                 webView.scrollView.setZoomScale(zoom, animated: true)
-
+                updateHeight()
                 delegate?.richEditorDidLoad?(self)
             }
-            updateHeight()
+            else{
+                updateHeight()
+            }
         }
         else if method.hasPrefix("input") {
             scrollCaretToVisible()
